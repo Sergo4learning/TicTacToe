@@ -7,8 +7,6 @@
     {
         static void Main(string[] args)
         {
-            // See https://aka.ms/new-console-template for more information
-            //int fild[,]  
             void draw_fild(char[,] fild_1)
             {
                 Console.ResetColor();
@@ -53,8 +51,6 @@
                             case 1 or 2 or 3:
                                 if (2 + (winline - 1) * 4 == i)
                                 {
-                                    //Console.ForegroundColor = ConsoleColor.Red;
-                                    //Console.Write("White on Red.");
                                     Console.ForegroundColor = ConsoleColor.Red;
                                     Console.Write(fild_1[i, j]);
                                     Console.ResetColor();
@@ -112,9 +108,7 @@
                 Console.Write(Х_O + " - ваш ход (нажмите на дополнительной клавиатуре кнопку с цыфрой куда хотите поставить " + Х_O + "):");
                 ConsoleKeyInfo move_1/*, move_2*/;
                 move_1 = Console.ReadKey();
-                //                Console.Write(" ,");
-                //                move_2 = Console.ReadKey();
-                switch (move_1.Key.ToString()/* + move_2.Key.ToString()*/)
+                switch (move_1.Key.ToString())
                 {
                     case "D7" or "NumPad7":
                         if (fild_1[2, 2] == ' ')
@@ -236,6 +230,7 @@
                         if (fild_1[2 + j * 4, 2 + i * 4] == ' ')
                         {
                             fild_1[2 + j * 4, 2 + i * 4] = X_O;
+                            return;
                         }
                     }
                 }
