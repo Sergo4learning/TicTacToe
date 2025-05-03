@@ -103,6 +103,7 @@
                     Console.WriteLine(fild_1[i, 12]);
                 }
             }
+            // Ход
             bool move(ref char[,] fild_1, char Х_O, ref int wm)
             {
                 Console.Write(Х_O + " - ваш ход (нажмите на дополнительной клавиатуре кнопку с цыфрой куда хотите поставить " + Х_O + "):");
